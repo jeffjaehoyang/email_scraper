@@ -3,12 +3,14 @@ import email, getpass, imaplib, os
 
 # your gmail imap settings have to be enabled for this script to work
 EMAIL_PROVIDER  = "@gmail.com"
-EMAIL_ADDR = os.environ.get("MAIL_USERNAME") + EMAIL_PROVIDER
+EMAIL_ADDR = os.environ.get("MAIL_USERNAME") 
 EMAIL_PWD = os.environ.get("MAIL_PASSWORD")
 TARGET_INBOX = "Daily Coding Problem"
 DESTINATION_DIR = "/Users/Jeff/Dropbox/Coding/daily_coding_problem/"
 SMTP_SERVER = "imap.gmail.com"
 SMTP_PORT = 993
+
+print(EMAIL_ADDR)
 
 #login to email with provided email/pwd/target inbox
 mail = imaplib.IMAP4_SSL(SMTP_SERVER)
